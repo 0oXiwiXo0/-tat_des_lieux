@@ -84,8 +84,7 @@ class _HomePageState extends State<HomePage> {
                         isEntreeChecked = value!;
                         if (value) {
                           isSortieChecked = false;
-                        }
-                        ;
+                        };
                       });
                     },
                   ),
@@ -122,8 +121,7 @@ class _HomePageState extends State<HomePage> {
                         isSortieChecked = value!;
                         if (value) {
                           isEntreeChecked = false;
-                        }
-                        ;
+                        };
                       });
                     },
                   ),
@@ -144,7 +142,7 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           Text(
-            '''L’état des lieux doit être établi de façon contradictoire entre les deux parties lors de la remise des clés au locataire et lors de leur restitution en fin de bail, conformément à l’article 3 de la Loi n°89-462 du 6 juillet 1989. Il fait partie du contrat de location, dont il ne peut être dissocié. L’état des lieux d’entrée peut être complété par le locataire dans les 10 jours suivant sa tenue (et pendant le 1er mois de chauffe pour les éléments de chauffage).''',
+            '''L'état des lieux doit être établi de façon contradictoire entre les deux parties lors de la remise des clés au locataire et lors de leur restitution en fin de bail, conformément à l'article 3 de la Loi n°89-462 du 6 juillet 1989. Il fait partie du contrat de location, dont il ne peut être dissocié. L'état des lieux d'entrée peut être complété par le locataire dans les 10 jours suivant sa tenue (et pendant le 1er mois de chauffe pour les éléments de chauffage).''',
             textAlign: TextAlign.justify,
             style: TextStyle(fontSize: 11.0),
           ),
@@ -360,6 +358,158 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           SizedBox(height: 16.0),
+
+          Divider(color: Colors.black, thickness: 2.0, height: 1),
+          SizedBox(height: 16.0),
+
+          Table(// Tableau pour les clés
+            border: TableBorder.all(color: Colors.black, width: 1),
+            columnWidths: const {0: FlexColumnWidth(1), 1: FlexColumnWidth(2)},
+            children: [
+              // En-tête
+              TableRow(
+                decoration: BoxDecoration(color: Colors.blue[100]),
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Type de clé',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Nbre et Commentaires',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+              // Lignes de données
+              TableRow(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Clés d\'immeuble'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        isDense: true,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              TableRow(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Boites aux lettres'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        isDense: true,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              TableRow(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Badge ou clé portail'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        isDense: true,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              TableRow(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Clés porte d\'entrée'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        isDense: true,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              TableRow(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Clés cave'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        isDense: true,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              TableRow(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Parking'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        isDense: true,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              TableRow(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Autre :'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        isDense: true,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ],
       ),
     );
